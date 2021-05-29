@@ -1,0 +1,26 @@
+spring:
+  profiles:
+    active: dev
+#  mvc:
+#    static-path-pattern: /**
+#    resources:
+#      static-locations: classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/,file:/home/uploads/
+
+  #图片上传
+  servlet:
+    multipart:
+      max-request-size: 10MB
+      file-size-threshold: 10MB
+
+
+  freemarker:
+#    prefix: classpath:/templates/
+    prefix: /
+    suffix: .ftl
+    request-context-attribute: request
+
+
+
+
+
+

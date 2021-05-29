@@ -1,0 +1,40 @@
+server:
+  port: 8080
+
+spring:
+
+  #数据源
+  datasource:
+#    url: jdbc:mysql://47.104.5.35:3306/operations?useUnicode=true&characterEncoding=utf-8&useSSL=false&zeroDateTimeBehavior=convertToNull&useOldAliasMetadataBehavior=true
+    url: jdbc:mysql://101.36.177.5:33306/report?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: ewq321#qrvz@xsjc
+  #缓存模式为redis
+  cache:
+    type: redis
+#  redis
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    database: 0
+    password:
+    timeout: 100s
+    #连接池配置
+    jedis:
+      pool:
+        #最大空闲连接数
+        max-idle: 500
+        #最小空闲连接数
+        min-idle: 50
+        #等待可用连接最大时间，负数为无限制
+        max-wait: -1s
+        #最大活跃连接时间
+        max-active: -1
+#项目变量配置
+values:
+  uploadPath: D:/Resource/resource
+
+
+
+
